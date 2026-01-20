@@ -22,6 +22,14 @@ Application météo dédiée aux compagnies de transport permettant d’afficher
 
 ---
 
+## Contexte & choix techniques
+
+Ce projet est conçu pour être affiché sur des écrans d’information dans les stations et dans les transports.  
+➡️ **Il n’est pas responsive** car il est destiné à un affichage fixe.
+
+L’application ne propose pas de moteur de recherche de ville, car l’API **Open-Meteo** fonctionne sur base de coordonnées (latitude/longitude).  
+La ville affichée est donc configurée via un fichier de configuration.
+
 ## Technologies utilisées
 
 - **Next.js / React**
@@ -98,10 +106,12 @@ Les données météo sont récupérées via une route API **Next.js** :
 ## Interface & icônes
 
 - Icônes personnalisées stockées dans `public/icons`
-- Interface de type *glassmorphism*
-- Affichage optimisé pour écrans fixes (ex. écrans de transport)
 
 ---
+
+## Évolutions possibles
+
+- Ajouter une interface d’administration pour la société de transport afin de changer la ville affichée (sans modification manuelle du fichier `config/city.json`)
 
 ## Auteur
 

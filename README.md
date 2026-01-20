@@ -1,47 +1,109 @@
 # Weather App
 
-Check the current weather on any city on the planet. Switch between metric and imperial units.
+Application météo dédiée aux compagnies de transport permettant d’afficher les conditions météorologiques actuelles d’une ville configurée, basée sur l’API **Open-Meteo** et développée avec **Next.js / React**.
 
-![Alt img](https://images.ctfassets.net/zlsyc9paq6sa/3uBrJ07WSM40FpolgjInHY/7d886cb4187b52194bf9b63c183a1d3a/1627637330_x.gif)
+![Aperçu de l’application](./public/preview.png)
 
-## Features
+---
 
-1. User's ability to search cities
+## Fonctionnalités
 
-2. Current local time and date
+- Affichage de la météo actuelle via **Open-Meteo**
+- Heure locale courante
+- Température
+- Vitesse et direction du vent
+- Humidité
+- Visibilité
+- Heure du lever du soleil
+- Heure du coucher du soleil
+- Rafraîchissement automatique des données (toutes les heures)
+- Gestion des états de chargement et d’erreur
+- Interface moderne avec CSS Modules et icônes personnalisées
 
-3. Temperatures and humidity
+---
 
-4. Wind speed and direction
+## Technologies utilisées
 
-5. Sunrise and sunset times
+- **Next.js / React**
+- **Open-Meteo API** (aucune clé API requise)
+- **CSS Modules**
+- **Fetch API**
+- **JavaScript (ES6+)**
 
-6. Metric vs Imperial system
-
-7. Error handling and loading info
+---
 
 ## Installation
 
-1. `git clone https://github.com/madzadev/weather-app.git`
+### 1. Cloner le dépôt
 
-2. `cd weather-app`
+\`\`\`bash
+git clone https://github.com/choucha-cyber/weather-app.git
+cd weather-app
+\`\`\`
 
-3. `npm install`
+### 2. Installer les dépendances
 
-4. Log-in to [Openweathermap.com](https://openweathermap.org/)
+\`\`\`bash
+npm install
+\`\`\`
 
-5. Create an API key
+### 3. Configurer la ville
 
-6. `cp .env.example .env.local`
+Modifier le fichier :
 
-7. Paste API key for `OPENWEATHER_API_KEY`
+\`\`\`bash
+config/city.json
+\`\`\`
 
-8. `npm run dev`
+Exemple de configuration :
 
-## Contributions
+\`\`\`json
+{
+  "city": "Paris",
+  "latitude": 48.8566,
+  "longitude": 2.3522
+}
+\`\`\`
 
-Any feature requests and pull requests are welcome!
+### 4. Lancer l'application
 
-## License
+\`\`\`bash
+npm run dev
+\`\`\`
 
-The project is under [MIT license](https://choosealicense.com/licenses/mit/).
+L’application est accessible à l’adresse :  
+**http://localhost:3000**
+
+---
+
+## API météo
+
+Ce projet utilise l’API **Open-Meteo** :  
+https://open-meteo.com/
+
+### Pourquoi Open-Meteo ?
+
+- Aucune clé API nécessaire  
+- Service rapide et fiable  
+- Utilisation gratuite pour les projets personnels et professionnels  
+
+Les données météo sont récupérées via une route API **Next.js** :
+
+\`\`\`
+/api/data
+\`\`\`
+
+---
+
+## Interface & icônes
+
+- Icônes personnalisées stockées dans `public/icons`
+- Interface de type *glassmorphism*
+- Affichage optimisé pour écrans fixes (ex. écrans de transport)
+
+---
+
+## Auteur
+
+Développé par **Mimouni Aïcha**  
+Projet : formation CPA-DevOps - Simplon - 2026

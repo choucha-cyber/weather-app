@@ -17,8 +17,6 @@ Application météo dédiée aux compagnies de transport permettant d’afficher
 - Heure du lever du soleil
 - Heure du coucher du soleil
 - Rafraîchissement automatique des données (toutes les heures)
-- Gestion des états de chargement et d’erreur
-- Interface moderne avec CSS Modules et icônes personnalisées
 
 ---
 
